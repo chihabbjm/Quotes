@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Quotes</string>
+    <string name="preview">"Welcome To our App we Provete to you the best Qoutes.
+ taken from top series anime and movies enjot it  "</string>
+    <string name="random_text">"  Random Quotes"</string>
+    <string name="category_text">"  Category Quotes"</string>
+    <string name="Favourite_text">" Your Favourite"</string>
+    <string name="Settings_text">"  Settings"</string>
+    <string name="dialog_error">"Check Agains Your details Sommething is Messing"</string>
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home_bg"
+    android:orientation="vertical"
+    tools:context="com.app.quotes.quotes.Home">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/popcorn"
+        android:layout_marginBottom="16dp"
+        android:layout_above="@+id/Category"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:id="@+id/Category"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/title_4"
+        android:text="@string/category_text"
+        android:textSize="15dp"
+        android:textColor="@color/text_color"
+
+        android:layout_marginBottom="14dp"
+        android:layout_above="@+id/Random"
+        android:layout_centerHorizontal="true"
+        android:onClick="logcat"
+        />
+
+    <Button
+        android:id="@+id/Settings"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/title_5"
+        android:text="@string/Settings_text"
+        android:textSize="15dp"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="15dp"
+        android:onClick="logset"
+        android:layout_below="@+id/Favourite"
+        android:layout_alignStart="@+id/Favourite" />
+
+    <Button
+        android:id="@+id/Favourite"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/title_3"
+        android:text="@string/Favourite_text"
+        android:textSize="15dp"
+        android:textColor="@color/text_color"
+
+        android:onClick="logfav"
+        android:layout_below="@+id/Random"
+        android:layout_alignStart="@+id/Random"
+        android:layout_marginTop="14dp" />
+
+    <Button
+        android:id="@+id/Random"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/title_1"
+        android:text="@string/random_text"
+        android:textSize="15dp"
+        android:textColor="@color/text_color"
+
+        android:onClick="ran"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/Category" />
+
+    <TextView
+        android:id="@+id/exit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="17dp"
+       android:background="@mipmap/back_arrow"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="Exit"
+        android:layout_marginStart="22dp" />
+
+    <TextView
+        android:id="@+id/addpost"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@mipmap/send_button"
+        android:layout_alignBottom="@+id/exit"
+        android:layout_alignParentEnd="true"
+        android:onClick="AddPost"
+        android:layout_marginEnd="20dp" />
+
+
+</RelativeLayout>
