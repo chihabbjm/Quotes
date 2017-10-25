@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_list_published_post"
-    tools:context="com.app.quotes.quotes.List_Published_Post">
+    tools:context="com.app.quotes.quotes.List_Published_Post"
+    android:orientation="vertical">
+
 
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/blog_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </android.support.v7.widget.RecyclerView>
-    
-    
-</RelativeLayout>
+        android:background="#EEEEEE"
+        android:layout_height="516dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:background="#d4d3d3"
+            />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

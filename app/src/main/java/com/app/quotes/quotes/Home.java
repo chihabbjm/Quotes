@@ -1,6 +1,7 @@
 package com.app.quotes.quotes;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.nfc.Tag;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,11 +18,15 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 
 public class Home extends AppCompatActivity {
-// declare variables  analycis in firebase
 
+    // declare variables  analycis in firebase
     protected FirebaseAnalytics mFirebaseAnalytics;
 
     public  String btnName = null;
+
+
+    //this for define Relative Layout :
+
 
 
 
@@ -44,6 +50,13 @@ public class Home extends AppCompatActivity {
         Button  Category = (Button) findViewById(R.id.Category);
         TextView addpost =(TextView) findViewById(R.id.addpost);
         TextView exit =(TextView) findViewById(R.id.exit);
+
+
+
+
+
+
+
 
     }
 

@@ -1,91 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="wrap_content"
-    android:layout_margin="16dp"  >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#dcdada"
+    app:cardCornerRadius="10dp"
+    android:layout_gravity="top"
+    android:layout_marginLeft="5dp"
+    app:contentPadding="5dp">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#eeeeee"
+        android:layout_gravity="center_horizontal"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/cradview3"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/post_title"
                 android:layout_width="match_parent"
-                android:layout_height="15dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
+                android:background="#b8bfc2"
                 android:gravity="center"
-                android:hint="some Title here " />
+                android:hint="some Title here "
+                android:textColor="#ecf2f2"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
 
         <ImageView
             android:id="@+id/post_image"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_width="335dp"
+            android:layout_height="290dp"
+            android:layout_gravity="center"
             android:adjustViewBounds="true"
             android:scaleType="fitXY" />
 
 
-
-
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/cradview2"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="0">
 
             <TextView
                 android:id="@+id/post_text"
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center"
+                android:background="#a3a4ab"
                 android:gravity="center"
-                android:hint="Some Description Here" />
+                android:text="Some Description Here"
+                android:textColor="#ecf2f2"
+                android:textSize="15dp" />
 
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="26dp"
-            android:background="@color/cradview1"
-            android:orientation="horizontal"
-            android:weightSum="1">
+            android:layout_height="25dp"
+            android:background="#e4e4e4"
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/like_nbr"
-                android:layout_width="30dp"
+            <LinearLayout
+                android:layout_width="115dp"
                 android:layout_height="match_parent"
+                android:background="#d8d9da">
 
-                 />
+                <TextView
+                    android:id="@+id/like_nbr"
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="13dp"
+                    android:hint="100" />
 
-            <Button
-                android:id="@+id/like"
-                android:layout_width="23dp"
+                <Button
+                    android:id="@+id/like"
+                    android:layout_width="23dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@mipmap/like"
+                    android:onClick="like_button" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="120dp"
                 android:layout_height="match_parent"
-                android:background="@mipmap/like"
-                android:onClick="like_button"
+                android:layout_gravity="center"
+                android:background="#cacfd2"></LinearLayout>
 
-                />
 
-            <Button
-                android:id="@+id/save"
-                android:layout_width="23dp"
+            <LinearLayout
+                android:layout_width="115dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="230dp"
-                android:background="@mipmap/download"
-                android:onClick="save"
-                />
+                android:background="#d8d9da">
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="23dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:background="@mipmap/download"
+                    android:onClick="save" />
+
+                <TextView
+                    android:id="@+id/save_nbr"
+                    android:layout_width="25dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:hint="30" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

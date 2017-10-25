@@ -1,6 +1,7 @@
 package com.app.quotes.quotes;
 
 import android.content.Context;
+import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -24,6 +25,8 @@ public class List_Published_Post extends AppCompatActivity {
     private RecyclerView mBlogList;
     private DatabaseReference mDatabase;
     public  String btnName = null;
+
+
 
     //this for define the variable FirebaseAnalytics (like logevent) :
     protected FirebaseAnalytics mFirebaseAnalytics;
@@ -121,8 +124,7 @@ mBlogList.setAdapter(firebaseRecyclerAdapter);
 
 
     //after that we create new class nammate  BlogViewHolder to conncate and set the attribut from the Firebase Database into the componet layout
-
-    public static  class BlogViewHolder  extends RecyclerView.ViewHolder {
+   public static  class BlogViewHolder  extends RecyclerView.ViewHolder {
 
            View mView ;
 
@@ -212,18 +214,30 @@ mBlogList.setAdapter(firebaseRecyclerAdapter);
     {
         //this for change the icon image from  the defoulat image into read image icon in on click evnet:
         v.setBackgroundResource(R.mipmap.like_pers);
-
         //  logEvent(btnName,params);
         params.putInt("ButtonsID",v.getId());
         btnName = "LikeCliked";
-
-
+        //this for send the logevnet :
+        mFirebaseAnalytics.logEvent(btnName,params);
 
     }
 
 
 
+    //this is onclick methode for change the image icon
 
+    public void save(View v)
+    {
+        //this for change the icon image from  the defoulat image into read image icon in on click evnet:
+        v.setBackgroundResource(R.mipmap.downlaod_pers);
+        //  logEvent(btnName,params);
+        params.putInt("ButtonsID",v.getId());
+        btnName = "SaveImageCliked";
+        //this for send the logevnet :
+        mFirebaseAnalytics.logEvent(btnName,params);
+
+
+    }
 
     //the end of the Class List_published post
 }

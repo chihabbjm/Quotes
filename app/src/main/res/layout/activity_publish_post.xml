@@ -65,8 +65,9 @@
         android:background="@mipmap/add_btn"
         android:textSize="18dp"
         android:gravity="center"
-        android:layout_above="@+id/title"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp" />
 
     <EditText
         android:id="@+id/imageurl"
