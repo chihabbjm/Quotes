@@ -78,7 +78,7 @@ public class List_Published_Post extends AppCompatActivity {
 @Override
     protected void onStart (){
         super.onStart();
-    //then we create new java lasse nammate Blog
+    //then we create new java classe nammate Blog
 
 
 
@@ -100,7 +100,8 @@ FirebaseRecyclerAdapter<Blog,BlogViewHolder> firebaseRecyclerAdapter =new Fireba
         //minute 12:53
 
 
-        viewHolder.setTitle(model.getTitle());
+       // not addet  with this UI blog row
+        //viewHolder.setTitle(model.getTitle());
         viewHolder.setText(model.getDescription());
 
 
@@ -154,7 +155,10 @@ mBlogList.setAdapter(firebaseRecyclerAdapter);
 
 
 
-        //this setter for the Title the name of the varable title from  the Blog class :
+        // Very Imoprtant ! ===> this setter for the Title the name of the varable title from  the Blog class :
+
+       //begining here
+                /*
         public void setTitle (String title )
         {
 
@@ -166,6 +170,8 @@ mBlogList.setAdapter(firebaseRecyclerAdapter);
 
         }
 
+        */
+       //end here
 
 
 
@@ -222,8 +228,6 @@ mBlogList.setAdapter(firebaseRecyclerAdapter);
 
     }
 
-
-
     //this is onclick methode for change the image icon
 
     public void save(View v)
@@ -238,6 +242,22 @@ mBlogList.setAdapter(firebaseRecyclerAdapter);
 
 
     }
+
+    public void favourite(View v)
+    {
+        //this for change the icon image from  the defoulat image into read image icon in on click evnet:
+        v.setBackgroundResource(R.mipmap.favourite_per);
+        //  logEvent(btnName,params);
+        params.putInt("ButtonsID",v.getId());
+        btnName = "FavouritePostCliked";
+        //this for send the logevnet :
+        mFirebaseAnalytics.logEvent(btnName,params);
+
+
+    }
+
+
+
 
     //the end of the Class List_published post
 }

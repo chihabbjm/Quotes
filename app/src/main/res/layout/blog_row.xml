@@ -3,131 +3,91 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/tools"
     android:id="@+id/card_view"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#dcdada"
-    app:cardCornerRadius="10dp"
-    android:layout_gravity="top"
-    android:layout_marginLeft="5dp"
-    app:contentPadding="5dp">
+    android:layout_width="340dp"
+    android:layout_height="345dp"
+    android:background="#143A52"
+    android:layout_gravity="center"
+    android:layout_marginTop="10dp"
+    android:gravity="center"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    app:cardCornerRadius="25dp"
+    android:layout_marginBottom="10dp">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#eeeeee"
-        android:layout_gravity="center_horizontal"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/post_title"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:background="#b8bfc2"
-                android:gravity="center"
-                android:hint="some Title here "
-                android:textColor="#ecf2f2"
-                android:textSize="15dp" />
-
-        </LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/view_group"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1">
 
 
         <ImageView
             android:id="@+id/post_image"
-            android:layout_width="335dp"
-            android:layout_height="290dp"
+            android:layout_width="283dp"
+            android:layout_height="210dp"
             android:layout_gravity="center"
-            android:adjustViewBounds="true"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.31"
             android:scaleType="fitXY" />
 
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:weightSum="0">
+            android:layout_height="20dp"
+            android:layout_weight="0.44">
+
 
             <TextView
                 android:id="@+id/post_text"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:background="#a3a4ab"
                 android:gravity="center"
-                android:text="Some Description Here"
-                android:textColor="#ecf2f2"
-                android:textSize="15dp" />
+                android:hint="Some Description Here"
+                android:textColorHint="#456299"
+                android:textSize="12dp" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="25dp"
-            android:background="#e4e4e4"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="115dp"
-                android:layout_height="match_parent"
-                android:background="#d8d9da">
+            <Button
+                android:id="@+id/like"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="40dp"
+                android:background="@mipmap/like"
+                android:gravity="center_horizontal"
+                android:onClick="like_button" />
 
-                <TextView
-                    android:id="@+id/like_nbr"
-                    android:layout_width="25dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="13dp"
-                    android:hint="100" />
-
-                <Button
-                    android:id="@+id/like"
-                    android:layout_width="23dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
-                    android:background="@mipmap/like"
-                    android:onClick="like_button" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="120dp"
-                android:layout_height="match_parent"
+            <Button
+                android:id="@+id/favourite"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_gravity="center"
-                android:background="#cacfd2"></LinearLayout>
+                android:layout_marginLeft="85dp"
+                android:background="@mipmap/favourite"
+                android:gravity="center"
+                android:onClick="favourite" />
 
+            <Button
+                android:id="@+id/save"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="85dp"
+                android:background="@mipmap/downlaod"
+                android:gravity="center_horizontal"
+                android:onClick="save" />
 
-            <LinearLayout
-                android:layout_width="115dp"
-                android:layout_height="match_parent"
-                android:background="#d8d9da">
-
-                <Button
-                    android:id="@+id/save"
-                    android:layout_width="23dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="30dp"
-                    android:background="@mipmap/download"
-                    android:onClick="save" />
-
-                <TextView
-                    android:id="@+id/save_nbr"
-                    android:layout_width="25dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="20dp"
-                    android:hint="30" />
-
-            </LinearLayout>
 
         </LinearLayout>
 
