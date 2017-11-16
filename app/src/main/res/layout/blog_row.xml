@@ -12,7 +12,7 @@
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp"
     app:cardCornerRadius="25dp"
-    android:layout_marginBottom="10dp">
+    app:cardBackgroundColor="#E0E0E0">
 
 
     <LinearLayout
@@ -27,36 +27,42 @@
 
         <ImageView
             android:id="@+id/post_image"
-            android:layout_width="283dp"
-            android:layout_height="210dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:layout_weight="0.31"
-            android:scaleType="fitXY" />
-
-
-        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:layout_weight="0.44">
+            android:layout_height="229dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.515"
+            android:layout_weight="0.10" />
 
 
             <TextView
                 android:id="@+id/post_text"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
+                android:layout_height="46dp"
+                android:layout_gravity="left"
                 android:gravity="center"
                 android:hint="Some Description Here"
                 android:textColorHint="#456299"
-                android:textSize="12dp" />
+                android:textSize="15dp"
+                card_view:layout_editor_absoluteX="78dp"
+                card_view:layout_editor_absoluteY="408dp" />
 
-        </RelativeLayout>
 
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="339dp"
+            android:layout_height="wrap_content"
+            card_view:layout_editor_absoluteY="317dp"
+            card_view:layout_editor_absoluteX="-5dp"
+            android:weightSum="1">
 
             <Button
                 android:id="@+id/like"
@@ -73,7 +79,7 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="85dp"
+                android:layout_marginLeft="95dp"
                 android:background="@mipmap/favourite"
                 android:gravity="center"
                 android:onClick="favourite" />
@@ -86,10 +92,13 @@
                 android:layout_marginLeft="85dp"
                 android:background="@mipmap/downlaod"
                 android:gravity="center_horizontal"
-                android:onClick="save" />
+                android:onClick="save"
+                android:layout_weight="0.05" />
 
 
         </LinearLayout>
+
+
 
 
     </LinearLayout>

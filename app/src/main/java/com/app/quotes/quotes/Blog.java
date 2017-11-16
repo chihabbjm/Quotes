@@ -45,4 +45,5 @@ public class Blog {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
 }

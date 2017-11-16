@@ -2,6 +2,8 @@ package com.app.quotes.quotes;
 
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -25,6 +27,11 @@ public class List_Published_Post extends AppCompatActivity {
     private RecyclerView mBlogList;
     private DatabaseReference mDatabase;
     public  String btnName = null;
+    //varable pressed used for like , dislike botton methode (like_button)
+  public   boolean pressed=false;
+
+
+
 
 
 
@@ -62,6 +69,8 @@ public class List_Published_Post extends AppCompatActivity {
 
         //make acces to the blog child no into the root acces :
         mDatabase= FirebaseDatabase.getInstance().getReference().child("/blog");
+
+
 
         //this of synchronize the data in enable internet acces :
         mDatabase.keepSynced(true);
@@ -143,12 +152,6 @@ mBlogList.setAdapter(firebaseRecyclerAdapter);
             mView = itemView;
 
 
-
-
-
-
-
-
         }
 
         // create new setter to all the layout commponet :
@@ -213,13 +216,29 @@ mBlogList.setAdapter(firebaseRecyclerAdapter);
     public   Bundle params = new Bundle();
 
 
-    //set the image icon in defoualt icon in back in layout XML:
+
 
     //this is onclick methode for change the image icon
     public void like_button(View v)
     {
-        //this for change the icon image from  the defoulat image into read image icon in on click evnet:
-        v.setBackgroundResource(R.mipmap.like_pers);
+
+
+
+        if  (pressed){
+            //this for change the icon image from  the defoulat image into read image icon in on click evnet:
+            v.setBackgroundResource(R.mipmap.like);
+            pressed=true;
+
+        }
+        else
+        {
+            v.setBackgroundResource(R.mipmap.like_pers);
+        }
+
+
+        pressed = !pressed;
+
+
         //  logEvent(btnName,params);
         params.putInt("ButtonsID",v.getId());
         btnName = "LikeCliked";
@@ -227,6 +246,7 @@ mBlogList.setAdapter(firebaseRecyclerAdapter);
         mFirebaseAnalytics.logEvent(btnName,params);
 
     }
+
 
     //this is onclick methode for change the image icon
 
@@ -254,7 +274,13 @@ mBlogList.setAdapter(firebaseRecyclerAdapter);
         mFirebaseAnalytics.logEvent(btnName,params);
 
 
+
     }
+
+
+
+
+
 
 
 

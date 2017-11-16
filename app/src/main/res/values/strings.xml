@@ -7,4 +7,5 @@
     <string name="Favourite_text">" Your Favourite"</string>
     <string name="Settings_text">"  Settings"</string>
     <string name="dialog_error">"Check Agains Your details Sommething is Messing"</string>
+    <string name="Error_connection">Please check your internet connection and try again</string>
 </resources>

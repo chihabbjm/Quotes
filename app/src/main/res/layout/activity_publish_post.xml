@@ -8,17 +8,17 @@
     tools:context="com.app.quotes.quotes.PublishPost">
 
     <TextView
-        android:layout_width="270dp"
-        android:layout_height="40dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
         android:gravity="center"
         android:text="Post"
         android:textSize="18dp"
         android:textColor="@color/colorPrimary"
         android:background="@drawable/untitled_2"
         android:id="@+id/postbutton"
-        android:layout_marginBottom="14dp"
+        android:layout_marginBottom="35dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/source" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/title"
@@ -60,14 +60,15 @@
 
     <ImageButton
         android:id="@+id/imageselector"
-        android:layout_width="290dp"
-        android:layout_height="210dp"
+        android:layout_width="300dp"
+        android:layout_height="230dp"
         android:background="@mipmap/add_btn"
         android:textSize="18dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp" />
+        android:layout_marginBottom="33dp"
+        android:layout_above="@+id/title"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/imageurl"

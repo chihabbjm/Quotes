@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#143A52"
+    android:background="#9eafb6"
     tools:context="com.app.quotes.quotes.List_Published_Post"
     android:orientation="vertical"
     android:weightSum="1">

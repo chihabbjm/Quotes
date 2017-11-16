@@ -259,11 +259,6 @@ public class PublishPost extends AppCompatActivity {
             //OR
             mProgress.dismiss();
             starttoast();
-
-
-
-
-
         }
 
 
