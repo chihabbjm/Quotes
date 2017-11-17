@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9eafb6"
+    android:background="#9bb6c1"
     tools:context="com.app.quotes.quotes.List_Published_Post"
     android:orientation="vertical"
     android:weightSum="1">
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/blog_list"
@@ -17,6 +18,7 @@
         android:layout_weight="1.00">
     </android.support.v7.widget.RecyclerView>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -24,6 +26,7 @@
         android:layout_gravity="bottom"
         android:background="@drawable/bottom_navigation_menu"
         android:orientation="vertical">
+
     </LinearLayout>
 
 </LinearLayout>
