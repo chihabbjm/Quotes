@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:background="@mipmap/title_4"
         android:text="@string/category_text"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textColor="@color/text_color"
 
         android:layout_marginBottom="14dp"
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:background="@mipmap/title_5"
         android:text="@string/Settings_text"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textColor="@color/text_color"
         android:layout_marginTop="15dp"
         android:onClick="logset"
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:background="@mipmap/title_3"
         android:text="@string/Favourite_text"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textColor="@color/text_color"
 
         android:onClick="logfav"
@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:background="@mipmap/title_1"
         android:text="@string/random_text"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textColor="@color/text_color"
 
         android:onClick="ran"

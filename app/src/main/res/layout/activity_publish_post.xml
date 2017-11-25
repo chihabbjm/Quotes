@@ -62,13 +62,12 @@
         android:id="@+id/imageselector"
         android:layout_width="300dp"
         android:layout_height="230dp"
-        android:background="@mipmap/add_btn"
-        android:textSize="18dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center"
-        android:layout_marginBottom="33dp"
         android:layout_above="@+id/title"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/postbutton"
+        android:layout_marginBottom="11dp"
+        android:background="@mipmap/add_btn"
+        android:gravity="center"
+        android:textSize="18dp" />
 
     <EditText
         android:id="@+id/imageurl"

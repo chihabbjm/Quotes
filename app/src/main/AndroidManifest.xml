@@ -35,7 +35,9 @@
         <activity
             android:name=".costomizetosat"
             android:screenOrientation="portrait" />
-        <activity android:name=".List_Published_Post"></activity>
+        <activity android:name=".List_Published_Post">
+            android:screenOrientation="portrait">
+        </activity>
     </application>
 
 </manifest>

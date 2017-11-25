@@ -4,31 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9bb6c1"
+    android:background="@drawable/bg_list_published_post"
     tools:context="com.app.quotes.quotes.List_Published_Post"
     android:orientation="vertical"
     android:weightSum="1">
-
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/blog_list"
         android:layout_width="match_parent"
-        android:layout_height="452dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="2dp"
-        android:layout_weight="1.00">
-    </android.support.v7.widget.RecyclerView>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:background="@drawable/bottom_navigation_menu"
-        android:orientation="vertical">
-
-    </LinearLayout>
-
+        android:layout_weight="1.00"></android.support.v7.widget.RecyclerView>
 </LinearLayout>
 
 
