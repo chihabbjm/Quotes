@@ -10,4 +10,6 @@
     <string name="Error_connection">Please check your internet connection and try again</string>
     <string name="Description">Some Description Here</string>
     <string name="Image_content">Image</string>
+    <string name="title_here">Title Here</string>
+    <string name="search_here">  Search here ...</string>
 </resources>

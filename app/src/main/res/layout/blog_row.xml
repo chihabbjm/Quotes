@@ -4,14 +4,14 @@
     xmlns:card_view="http://schemas.android.com/tools"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
-    android:layout_height="335dp"
+    android:layout_height="350dp"
     android:layout_gravity="center"
     android:layout_marginEnd="10dp"
     android:layout_marginStart="10dp"
     android:layout_marginTop="10dp"
     android:background="#143A52"
     android:gravity="center"
-    app:cardBackgroundColor="#dcddde"
+    app:cardBackgroundColor="#d7d7d7"
     app:cardCornerRadius="25dp">
 
 
@@ -27,15 +27,15 @@
         <ImageView
             android:id="@+id/post_image"
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="250dp"
             android:layout_gravity="center"
             android:layout_marginEnd="8dp"
-            android:contentDescription="@string/Image_content"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="25dp"
-            android:layout_weight="0.51"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0.31"
+            android:contentDescription="@string/Image_content"
             android:scaleType="fitXY"
             app:layout_constraintHorizontal_bias="0.515"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -46,12 +46,13 @@
         <TextView
             android:id="@+id/post_text"
             android:layout_width="match_parent"
-            android:layout_height="46dp"
+            android:layout_height="61dp"
             android:layout_gravity="start"
             android:layout_weight="0.51"
+            android:background="@drawable/text_feald"
             android:gravity="center"
             android:hint="@string/Description"
-            android:textColorHint="#456299"
+            android:textColorHint="#6a7b9b"
             android:textSize="15sp"
             card_view:layout_editor_absoluteX="78dp"
             card_view:layout_editor_absoluteY="408dp" />
@@ -59,7 +60,27 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@drawable/line_group">
+            android:src="@drawable/line_group">
+
+
+            <TextView
+                android:id="@+id/post_title"
+                android:layout_width="224dp"
+                android:layout_height="0dp"
+
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/text_feald"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:text="@string/title_here"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.063"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.48000002" />
 
             <Button
                 android:id="@+id/like"
@@ -68,33 +89,17 @@
                 android:layout_gravity="center"
                 android:layout_margin="50dp"
                 android:layout_marginBottom="4dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="16dp"
                 android:background="@mipmap/like"
                 android:gravity="center"
                 android:onClick="like_button"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.98"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <Button
-                android:id="@+id/favourite"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="center"
-                android:layout_margin="50dp"
-                android:layout_marginBottom="4dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
-                android:background="@mipmap/favourite"
-                android:gravity="center"
-                android:onClick="favourite"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/save"
-                app:layout_constraintStart_toEndOf="@+id/like"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.529" />
+                app:layout_constraintVertical_bias="0.49" />
 
 
             <Button
@@ -102,15 +107,19 @@
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"
-                android:layout_margin="50dp"
                 android:layout_marginBottom="4dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
                 android:background="@mipmap/downlaod"
                 android:gravity="center"
                 android:onClick="save"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
         </android.support.constraint.ConstraintLayout>
 

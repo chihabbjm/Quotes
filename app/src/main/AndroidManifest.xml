@@ -38,6 +38,16 @@
         <activity android:name=".List_Published_Post">
             android:screenOrientation="portrait">
         </activity>
+        <activity
+        android:name=".Details"
+        android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".List_Published_Post"
+                />
+
+
+        </activity>
     </application>
 
 </manifest>

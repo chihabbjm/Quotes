@@ -28,13 +28,11 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-
-
-
-
     // the dependencles of the recycleview a IS -v7:25.3.1 becouse the version of the app is Android 25 :
 
     //  compile 'com.firebaseui:firebase-ui-database:0.6.2'   is for working with the recyculerviw in firebase :
+
+    //the dependencles of the RoundView ImageView Is:  compile 'com.makeramen:roundedimageview:2.3.0'
 
 
     compile 'com.android.support:appcompat-v7:25.3.1'
@@ -48,6 +46,7 @@ dependencies {
     compile 'com.google.firebase:firebase-invites:10.0.1'
     compile 'com.google.firebase:firebase-ads:10.0.1'
     compile 'com.google.firebase:firebase-storage:10.0.1'
+    compile 'com.victor:lib:1.0.4'
     compile 'com.android.support:recyclerview-v7:25.3.1'
     compile 'com.android.support:cardview-v7:25.3.1'
     compile 'com.google.firebase:firebase-auth:10.0.1'
@@ -55,6 +54,7 @@ dependencies {
     compile 'com.victor:lib:1.0.4'
     compile 'com.valdesekamdem.library:md-toast:0.9.0'
     compile 'com.tapadoo.android:alerter:2.0.1'
+    compile 'com.makeramen:roundedimageview:2.3.0'
     testCompile 'junit:junit:4.12'
 }
 apply plugin: 'com.google.gms.google-services'

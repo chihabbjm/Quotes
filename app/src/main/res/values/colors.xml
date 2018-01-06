@@ -5,7 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="field">#63587b</color>
     <color name="text_color">#335369</color>
-    <color name="background1">#BBDEFB</color>
+    <color name="background1">#bdcddb</color>
     <color name="background">#486e80</color>
     <color name="splash">#366391</color>
     <color name="imageselector">#336279</color>
@@ -20,6 +20,7 @@
     <color name="cradview2">#c4d1c8</color>
     <color name="cradview3">#a8b4b3</color>
     <color name="ActionBarColor">#749390</color>
+    <color name="ImageView">#cbcbce</color>
 
 
 
